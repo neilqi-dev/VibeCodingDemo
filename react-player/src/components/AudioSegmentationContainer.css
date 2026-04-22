@@ -1,0 +1,65 @@
+/* Audio Segmentation Container Styles */
+
+.audio-segmentation-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 8px 0;
+  position: relative;
+}
+
+.segmentation-error {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 12px;
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 4px;
+  color: #856404;
+  font-size: 13px;
+  flex: 1;
+  min-width: 250px;
+}
+
+.error-message {
+  margin: 0;
+  flex: 1;
+}
+
+.error-dismiss {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  color: #856404;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+  min-width: auto;
+}
+
+.error-dismiss:hover {
+  opacity: 1;
+}
+
+.error-dismiss:focus {
+  outline: 2px solid #ffc107;
+  outline-offset: 2px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .audio-segmentation-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .segmentation-error {
+    width: 100%;
+    min-width: auto;
+  }
+}

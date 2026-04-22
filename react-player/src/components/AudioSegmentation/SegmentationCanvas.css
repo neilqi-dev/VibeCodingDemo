@@ -1,0 +1,37 @@
+/* Segmentation Canvas Styles */
+
+.segmentation-canvas-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  user-select: none;
+}
+
+.segmentation-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  cursor: default;
+}
+
+/* Cursor states */
+.segmentation-canvas:hover {
+  /* Canvas cursor is handled via JavaScript */
+}
+
+/* Segmentation Canvas disable styles */
+.segmentation-canvas-container.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* Canvas overlay container */
+.segmentation-canvas-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}

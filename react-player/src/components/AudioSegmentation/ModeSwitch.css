@@ -1,0 +1,79 @@
+/* Mode Switch Styles */
+
+.mode-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 8px;
+}
+
+.mode-switch-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  gap: 8px;
+}
+
+.mode-switch-input {
+  display: none;
+}
+
+.mode-switch-slider {
+  position: relative;
+  display: inline-flex;
+  width: 48px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 24px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.mode-switch-slider::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: white;
+  top: 2px;
+  left: 2px;
+  transition: left 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mode-switch-input:checked + .mode-switch-slider {
+  background-color: #4caf50;
+}
+
+.mode-switch-input:checked + .mode-switch-slider::before {
+  left: 26px;
+}
+
+.mode-switch-input:disabled + .mode-switch-slider {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.mode-switch-input:focus + .mode-switch-slider {
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+}
+
+.mode-switch-text {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+  min-width: 50px;
+  text-align: left;
+}
+
+/* Accessibility */
+.mode-switch-label:hover .mode-switch-slider {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.mode-switch-input:focus-visible + .mode-switch-slider {
+  outline: 2px solid #4caf50;
+  outline-offset: 2px;
+}

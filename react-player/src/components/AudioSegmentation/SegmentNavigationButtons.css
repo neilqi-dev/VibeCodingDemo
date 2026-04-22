@@ -1,0 +1,122 @@
+/* Segment Navigation Buttons Styles */
+
+.segment-navigation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 4px;
+}
+
+.segment-info {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+  min-width: 150px;
+}
+
+.segment-info-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.segment-nav-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.segment-nav-button {
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  color: #333;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 60px;
+  gap: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.segment-nav-button:hover:not(:disabled) {
+  background-color: #e8e8e8;
+  border-color: #999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.segment-nav-button:active:not(:disabled) {
+  background-color: #d0d0d0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.segment-nav-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: #999;
+}
+
+.segment-nav-button:focus-visible {
+  outline: 2px solid #4caf50;
+  outline-offset: 2px;
+}
+
+.prev-button::before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-right: 4px solid currentColor;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  margin-right: 4px;
+}
+
+.next-button::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 4px solid currentColor;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  margin-left: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .segment-navigation {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .segment-info {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .segment-nav-buttons {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .segment-nav-button {
+    flex: 1;
+    min-width: auto;
+    max-width: 100px;
+  }
+
+  .prev-button::before,
+  .next-button::after {
+    display: none;
+  }
+
+  .prev-button,
+  .next-button {
+    padding: 8px 8px;
+    font-size: 11px;
+  }
+}

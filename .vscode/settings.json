@@ -8,7 +8,15 @@
     },
     "chat.tools.terminal.autoApprove": {
         ".specify/scripts/bash/": true,
-        ".specify/scripts/powershell/": true
+        ".specify/scripts/powershell/": true,
+        "openspec": true,
+        "Test-Path": true,
+        "npm run build": true,
+        "npx vitest": true,
+        "Get-Command": true,
+        "npm run dev": true,
+        "npm install": true,
+        "ForEach-Object": true
     }
 }
 
